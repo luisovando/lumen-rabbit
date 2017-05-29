@@ -23,7 +23,9 @@ class QueueTestController extends Controller
             "bazBar": 1
         }');
 
-        \Queue::connection('rabbitmq_bulk')->push('Illuminate\\Queue\\CallQueuedHandler@call', $item, 'hpq');
+        $job = new QueueItemJob($item);
+
+        \Queue::connection('rabbitmq_bulk')->push($job);
     }
 
     public function sendToFastQueue() {

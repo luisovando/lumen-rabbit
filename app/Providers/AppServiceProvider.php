@@ -10,20 +10,6 @@ use Illuminate\Queue\Events\JobProcessing;
 class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        /*\Queue::before(function (JobProcessing $event) {
-            dd($event);
-            // $event->job
-            // $event->job->payload()
-        });*/
-    }
-
-    /**
      * Register any application services.
      *
      * @return void

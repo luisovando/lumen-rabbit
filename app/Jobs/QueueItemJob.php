@@ -6,11 +6,15 @@ use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob;
 
 class QueueItemJob extends Job
 {
+    protected $data;
+
     /**
      * Create a new job instance.
+     * @param $payload
      */
-    public function __construct()
+    public function __construct($payload)
     {
+        $this->data = $payload;
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\WorkerCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
 use Mlntn\Console\Commands\Serve;
@@ -15,6 +16,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Serve::class,
+        WorkerCommand::class
     ];
 
     /**
